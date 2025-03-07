@@ -14,8 +14,8 @@ jobs:
       run: | 
         echo "--pwd--"
         pwd
-        echo"--ls-lrt--"
-        ls-lthr
+        echo"--listdir--"
+        ls-lrt
     
     
     
