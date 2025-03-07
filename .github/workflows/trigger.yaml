@@ -1,0 +1,21 @@
+name: Hello world pipeline
+on:
+  workflow_dispatch:
+jobs:
+  Hello:
+    name: print hello
+    runs-on: buntu-latest
+    steps:
+    - name: check out code
+      uses: actions/checkout@v4
+    - name: say hello to all
+      run: echo "hello world!"
+    - name: this is a literal block
+      run: | 
+        echo "--pwd--"
+        pwd
+        echo"--ls-lrt--"
+        ls-lthr
+    
+    
+    
