@@ -4,7 +4,7 @@ on:
 jobs:
   Hello:
     name: print hello
-    runs-on: buntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: check out code
       uses: actions/checkout@v4
