@@ -1,0 +1,24 @@
+name: variable and parameter
+on:
+  workflow_dispatch:
+    inputs:
+      K8s_cluster:
+        default: "dev"
+        description: k8s_cluster
+        type: choice
+        options:
+          - dev
+          - sit
+          -uat
+          - prod
+env:
+  K8s_cluster: ${{ inputs.K8s_cluster }}  # global variable available to all jobs
+jobs:
+  deployjob:
+    name: deployjob   
+    runs-on: ubuntu-latest 
+    steps:
+      - name: check out the code
+        uses: actions/checkout@v4
+      - name: deployK8s_cluster
+        run: echo "Deploying on $K8s_cluster"
