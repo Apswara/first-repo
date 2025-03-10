@@ -1,4 +1,4 @@
-name: K8s_cluster
+name: K8sdeployment
 on:
   workflow_dispatch:
     inputs:
@@ -9,7 +9,7 @@ on:
         options:
           - dev
           - sit
-          -uat
+          - uat
           - prod
 env:
   K8s_cluster: ${{ inputs.K8s_cluster }}  # global variable available to all jobs
