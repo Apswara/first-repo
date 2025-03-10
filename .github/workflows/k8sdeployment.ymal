@@ -1,4 +1,4 @@
-name: variable and parameter
+name: K8s_cluster
 on:
   workflow_dispatch:
     inputs:
