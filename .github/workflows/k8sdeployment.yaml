@@ -12,7 +12,7 @@ on:
           - uat
           - prod
 env:
-  K8s_cluster: ${{ inputs.K8s_cluster }}  # global variable available to all jobs
+  K8sCluster: ${{ inputs.K8s_cluster }}  # global variable available to all jobs
 jobs:
   deployjob:
     name: deployjob   
@@ -21,4 +21,4 @@ jobs:
       - name: check out the code
         uses: actions/checkout@v4
       - name: deployK8s_cluster
-        run: echo "Deploying on $K8s_cluster"
+        run: echo "Deploying on $K8sCluster"
