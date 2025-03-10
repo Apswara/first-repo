@@ -1,0 +1,12 @@
+on:
+  pull_request:
+     types:
+       - closed
+    
+jobs:
+  build:
+    name: print_build
+    runs-on: ubuntu-latest
+    steps:
+    - name: build_print
+      run: echo "Build!"
