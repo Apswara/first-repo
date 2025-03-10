@@ -1,0 +1,22 @@
+name: variable and parameter
+on:
+  workflow_dispatch:
+env:
+  java_version: "17"
+jobs: 
+  build:
+    name: Buid   
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out the code
+        uses: actions/checkout@v4
+      - name: setting up java_version
+        run: echo "hello selling up java_version $java_version"
+  deployment:
+    name: Buliding docker application  
+    env: 
+      NAME: "Apswara "  # local variable available to this job only 
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Buliding Docker application  
+        run: echo "Buliding Docker application $Name-App" 
