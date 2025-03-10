@@ -19,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
       - name: Buliding Docker application  
-        run: echo "Buliding Docker application $Name-App" 
+        run: echo "Buliding Docker application $NAME-App" 
