@@ -19,6 +19,6 @@ permissions:
   id-token: write
 jobs:
   build:
-    uses: tcslabsfjbs/gh-actions/.github/workflows/hello.yaml@main
+    uses: Apswara/.github/workflows/reuseable.yaml@main
     with:
       java_ver: "$java_version"
