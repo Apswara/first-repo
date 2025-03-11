@@ -2,7 +2,7 @@ name: Workflow reusing
 on: 
   workflow_dispatch:
     inputs:
-      java_version:
+      java_ver:
         default: "17"
         description: java_ver
         type: choice
@@ -18,4 +18,4 @@ jobs:
   build:
     uses: tcslabsfjbs/gh-actions/.github/workflows/hello.yaml@main
     with:
-      java_ver: "$java_version"
+      java_ver: "$java_ver"
