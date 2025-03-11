@@ -12,7 +12,7 @@ on:
           - "20"
           - "21"
 env:
-  java_version: ${{inputs.java_version}}
+  java_version: ${{ inputs.java_version }}
 permissions:
   contents: read
   id-token: write
