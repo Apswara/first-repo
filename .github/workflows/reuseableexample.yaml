@@ -11,6 +11,9 @@ on:
           - "18"
           - "20"
           - "21"
+env:
+  java_version: ${{input.java_version}}
+
 permissions:
   contents: read
   id-token: write
@@ -18,4 +21,4 @@ jobs:
   build:
     uses: tcslabsfjbs/gh-actions/.github/workflows/hello.yaml@main
     with:
-      java_ver: "${{input.java_version}}"
+      java_ver: "$java_version"
