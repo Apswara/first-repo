@@ -1,0 +1,21 @@
+name: Workflow reusing
+on: 
+  workflow_dispatch:
+    inputs:
+      java_version:
+        default: "17"
+        description: java_ver
+        type: choice
+        options:
+          - "17"
+          - "18"
+          - "20"
+          - "21"
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  build:
+    uses: tcslabsfjbs/gh-actions/.github/workflows/hello.yaml@main
+    with:
+      java_ver: "$java_version"
